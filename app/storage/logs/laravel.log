@@ -1,0 +1,20 @@
+[2014-07-10 06:42:43] production.ERROR: exception 'InvalidArgumentException' with message 'View [hello!] not found.' in /var/www/poslaravel/bootstrap/compiled.php:9107
+Stack trace:
+#0 /var/www/poslaravel/bootstrap/compiled.php(9080): Illuminate\View\FileViewFinder->findInPaths('hello!', Array)
+#1 /var/www/poslaravel/vendor/laravel/framework/src/Illuminate/View/Factory.php(124): Illuminate\View\FileViewFinder->find('hello!')
+#2 /var/www/poslaravel/bootstrap/compiled.php(3216): Illuminate\View\Factory->make('hello!')
+#3 /var/www/poslaravel/app/routes.php(16): Illuminate\Support\Facades\Facade::__callStatic('make', Array)
+#4 /var/www/poslaravel/app/routes.php(16): Illuminate\Support\Facades\View::make('hello!')
+#5 [internal function]: {closure}()
+#6 /var/www/poslaravel/bootstrap/compiled.php(5106): call_user_func_array(Object(Closure), Array)
+#7 /var/www/poslaravel/bootstrap/compiled.php(4786): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#8 /var/www/poslaravel/bootstrap/compiled.php(4774): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#9 /var/www/poslaravel/bootstrap/compiled.php(706): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 /var/www/poslaravel/bootstrap/compiled.php(687): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 /var/www/poslaravel/bootstrap/compiled.php(7440): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#12 /var/www/poslaravel/bootstrap/compiled.php(8047): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#13 /var/www/poslaravel/bootstrap/compiled.php(7994): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#14 /var/www/poslaravel/bootstrap/compiled.php(10612): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#15 /var/www/poslaravel/bootstrap/compiled.php(648): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#16 /var/www/poslaravel/public/index.php(49): Illuminate\Foundation\Application->run()
+#17 {main} [] []
